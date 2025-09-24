@@ -71,13 +71,15 @@ func DeleteTransaction(Lapor []Transaction) []Transaction {
 		return Lapor
 	}
 
-	for index := range Lapor {
-		if index == deletedId {
-			indexDeleted = index - 1
-			break
-		}
-	}
+	// Logic Awal gajadi dipakai
+	// for index := range Lapor {
+	// 	if index == deletedId {
+	// 		indexDeleted = index - 1
+	// 		break
+	// 	}
+	// }
 
+	indexDeleted = deletedId - 1
 	Lapor = append(Lapor[:indexDeleted], Lapor[indexDeleted+1:]...)
 	return Lapor
 
