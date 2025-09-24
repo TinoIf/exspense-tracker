@@ -43,3 +43,12 @@ func AddTransaction(Lapor []Transaction) []Transaction {
 
 	return Lapor
 }
+
+func DisplayTransaction(Lapor []Transaction) {
+
+	fmt.Println("======================== Berikut Laporan Transaksi Kamu ==============================")
+	fmt.Println("No\tDeskripsi\t\tHarga\t\tTipe")
+	for index, value := range Lapor {
+		fmt.Print(index+1, "\t", value.Deskripsi, "\t\t", value.Harga, "\t", value.Tipe)
+	}
+}
